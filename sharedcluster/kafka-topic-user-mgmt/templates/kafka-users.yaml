@@ -1,0 +1,35 @@
+{{- range $userIndex, $user := .Values.kafkaUsers }}
+---
+apiVersion: kafka.strimzi.io/v1beta2
+kind: KafkaUser
+metadata:
+  name: {{ $user.name }}
+  labels:
+    strimzi.io/cluster: {{ $.Values.kafkaCluster }}
+spec:
+  authentication:
+    type: scram-sha-512
+  authorization:
+    type: simple
+    acls:
+    {{- range $topicIndex, $topic := $user.topics }}
+      - resource:
+          type: topic
+          name: {{ $topic.name }}
+          patternType: literal
+        operations:
+        {{- range $operationIndex, $operation := $topic.operations }}
+          - {{ $operation }}
+        {{- end }}
+        host: "*"
+      - resource:
+          type: group
+          name: {{ $user.name }}-group
+          patternType: literal
+        operations:
+        {{- range $operationIndex, $operation := $topic.operations }}
+          - {{ $operation }}
+        {{- end }}
+        host: "*"
+    {{- end }}
+{{- end }}
