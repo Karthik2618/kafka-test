@@ -1,19 +1,10 @@
-kafkaCluster: kafka-cluster-demo
+kafkaCluster: kafkatest2
 kafkaTopics:
-  - name: shared-topic1
-    partitions: 3
-    replicationFactor: 2
+  - name: new-topic1
+    partitions: 1
+    replicationFactor: 1
     config:
       retention:
         ms: 86400000
       segment:
         bytes: 536870912
-  - name: exclusive-topic1
-  - name: exclusive-topic2
-    partitions: 1
-    replicationFactor: 3
-    config:
-      retention:
-        ms: 604800000
-      segment:
-        bytes: 1073741824
