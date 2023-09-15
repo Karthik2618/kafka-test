@@ -1,6 +1,6 @@
 kafkaCluster: kafkatest2
 kafkaTopics:
-  - name: new-topic1
+  - name: new-topic2
     partitions: 1
     replicationFactor: 1
     config:
