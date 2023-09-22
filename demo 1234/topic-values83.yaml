@@ -1,0 +1,11 @@
+
+kafkaCluster: kafkatest2
+kafkaTopics:
+  - name: new-topic-56465
+    partitions: 1
+    replicationFactor: 1
+    config:
+      retention:
+        ms: 86400000
+      segment:
+        bytes: 536870912
