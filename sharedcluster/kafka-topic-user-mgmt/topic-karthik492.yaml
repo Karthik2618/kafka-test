@@ -1,0 +1,10 @@
+kafkaCluster: kafka-cluster-demo
+kafkaTopics:
+- config:
+    retention:
+      ms: 86400000
+    segment:
+      bytes: 536870912
+  name: ktopic
+  partitions: 3
+  replicationFactor: 2
