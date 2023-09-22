@@ -1,0 +1,1 @@
+['kafkaCluster: kafkatest2\n', 'kafkaTopics:\n', '- config:\n', '    retention:\n', '      ms: 86400000\n', '    segment:\n', '      bytes: 536870912\n', '  name: k_topic\n', '  partitions: 3\n', '  replicationFactor: 2\n']
