@@ -5,7 +5,7 @@ kafkaTopics:
       ms: 86400000
     segment:
       bytes: 536870912
-  name: shared-topic1
+  name: k_topic
   partitions: 3
   replicationFactor: 2
 - name: exclusive-topic1
