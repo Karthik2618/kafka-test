@@ -1,4 +1,4 @@
-kafkaCluster: kafka-cluster-demo
+kafkaCluster: shared-manual
 kafkaUsers:
   - name: kafka-user-1
     topics:
