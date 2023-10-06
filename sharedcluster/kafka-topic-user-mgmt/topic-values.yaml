@@ -1,5 +1,5 @@
 
-kafkaCluster: kafkatest2
+kafkaCluster: shared-manual
 kafkaTopics:
   - name: new-topic-56465
     partitions: 1
