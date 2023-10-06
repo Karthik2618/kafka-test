@@ -1,4 +1,4 @@
-kafkaCluster: shared-manual-app
+kafkaCluster: tst-manual
 kafkaUsers:
   - name: kafka-user-1
     topics:
